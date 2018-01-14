@@ -1,0 +1,9 @@
+<%= link_to 'Crear ToDo', todos_new_path %>
+
+<% @todos.each do |todo| %>
+<div class="well"><%= todo.description %>
+  <%= link_to 'Ver', todo_path(todo.id) %>
+  <%= link_to 'Editar', todos_edit_path(todo.id) %>
+  <%= link_to 'Eliminar', todos_delete_path(todo.id), method: :delete %>
+  <%= link_to 'Completado', todos_complete_path(todo.id) %></div>
+<% end %>
