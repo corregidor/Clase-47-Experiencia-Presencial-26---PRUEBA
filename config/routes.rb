@@ -13,4 +13,6 @@ patch '/todos/:id', to: 'todos#update'
 delete '/todos/:id', to: 'todos#destroy', as: 'todos_delete'
 get '/todos/:id/complete', to: 'todos#complete', as: 'todos_complete'
 
+root 'todos#index'
+
 end

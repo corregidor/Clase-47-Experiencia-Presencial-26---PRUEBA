@@ -1,7 +1,21 @@
 <div class="navbar navbar-default navbar-fixed-top" id="bs-example-navbar-collapse-7">
   <ul class="nav navbar-nav">
+    <% if params[:controller] == 'todos' && params[:action] == 'index'%>
     <li class="active"><%= link_to 'Index', todos_path %></li>
+    <% else %>
+    <li><%= link_to 'Index', todos_path %></li>
+    <% end %>
+
+    <% if params[:controller] == 'todos' && params[:action] == 'list'%>
+    <li class="active"><%= link_to 'List', todos_list_path %></li>
+    <% else %>
     <li><%= link_to 'List', todos_list_path %></li>
+    <% end %>
+
+    <% if params[:controller] == 'todos' && params[:action] == 'new'%>
+    <li class="active"><%= link_to 'Crear ToDo', todos_new_path %></li>
+    <% else %>
     <li><%= link_to 'Crear ToDo', todos_new_path %></li>
+    <% end %>
   </ul>
 </div>
