@@ -2,6 +2,5 @@
 <div class="alert alert-danger" role="alert"> El ToDo no se puede guardar vacío. Debes ingresar una tarea.
 </div>
 <% end %>
-<%= form_with model: @todo, local: true do |form| %>
-<%= render 'form', form: form %>
-<% end %>
+
+<%= render 'form', todo: @todo %>
